@@ -46,7 +46,7 @@ export default {
 
 .home-description{
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 35px;
 } 
 
@@ -57,7 +57,7 @@ export default {
   border-radius: 5px;
   color: white;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 300;
   cursor: pointer;
   width: 200px;
 }
