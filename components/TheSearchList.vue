@@ -22,6 +22,7 @@ export default {
     },
     computed: {
         pokemonsFiltered() {
+            console.log(this.$store.state.pokemonsFiltered)
             return this.$store.state.pokemonsFiltered
         },
         pokemons() {
@@ -56,7 +57,6 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .search-list p {
@@ -64,5 +64,6 @@ export default {
         font-weight: 200;
         margin: 10px;
         line-height: 2rem;
+        text-align: center;
     }
 </style>

@@ -26,6 +26,6 @@ export default {
 <style>
     .pokedex-section {
         grid-area: content;
-        padding: 20px;
+        padding: 10px 20px;
     }
 </style>

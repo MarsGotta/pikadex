@@ -33,7 +33,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin: 10px 0 0 0;
         padding: 0;
     }
 

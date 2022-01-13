@@ -4,7 +4,10 @@
             <li v-for="(pokemon, index) in items" :key="index" @click="() => handleClick(pokemon)" >
                 <mars-card class="list-item"> 
                     <img :src="pokemon.image" :alt="pokemon.name" width="150" />
-                    <h3>{{ pokemon.name }}</h3> 
+                    <span>
+                        <h2>{{ pokemon.number }}</h2>
+                        <h3>{{ pokemon.name }}</h3> 
+                    </span>
                 </mars-card>
             </li>
         </ul>
@@ -60,5 +63,17 @@ export default {
     .list-item {
         display: flex;
         width: 100%;
+    }
+
+    .list-item h2 {
+        color: var(--color-ocre-500);
+    }
+
+    .list-item h2, .list-item h3 {
+        margin: 5px;
+    }
+
+    .list-item span {
+        padding: 10px;
     }
 </style>
