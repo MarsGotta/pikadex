@@ -1,7 +1,7 @@
 <template>
-    <section>
+    <section class="search-list">
         <p>
-            {{ pokemons.length }} Pokemons for you to choose your favorite
+            <strong>{{ pokemons.length }}</strong> Pokemons for you to choose your favorite:
         </p>
         <mars-search placeholder="Find your pokemon" @search="(search) => handlePagination({ search, page: 1 })"></mars-search>
         <mars-list :items="pokemonsFiltered" :on-pagination="(page) => handlePagination({ page })" :on-card-click="handleCardClick"/>
@@ -9,8 +9,6 @@
 </template>
 
 <script>
-
-
 export default {
     props: {
         search: {
@@ -52,3 +50,19 @@ export default {
     }
 }
 </script>
+
+<style>
+    .search-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-list p {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin: 10px;
+        line-height: 2rem;
+    }
+</style>

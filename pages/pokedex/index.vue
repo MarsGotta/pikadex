@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="pokedex-section">
         <the-search-list :page="1" :search="search"></the-search-list>
     </section>
 </template>
@@ -19,3 +19,10 @@ export default {
     },
 }
 </script>
+
+<style>
+    .pokedex-section {
+        grid-area: content;
+        padding: 20px;
+    }
+</style>

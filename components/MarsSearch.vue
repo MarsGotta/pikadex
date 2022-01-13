@@ -1,7 +1,7 @@
 <template>
-    <section>
-        <mars-field :on-input="handleInput" :placeholder="placeholder" :value="search"/>
-        <mars-button @click="handleClick"> Search </mars-button>
+    <section class="mars-search">
+        <mars-field class="search-field" :on-input="handleInput" :placeholder="placeholder" :value="search"/>
+        <mars-button class="search-button" @click="handleClick"> Search </mars-button>
     </section>
 </template>
 <script>
@@ -32,3 +32,24 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .mars-search {
+        width: 100%;
+    }
+
+    .search-field {
+        width: calc(100% - 100px);
+        height: 25px;
+    }
+
+    .search-button {
+        width: 85px;
+        border: 0;
+        border-radius: 5px;
+        height: 30px;
+        background-color: var(--color-ocre-500);
+        color: white;
+        font-size: 18px;
+    }
+</style>

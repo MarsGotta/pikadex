@@ -1,8 +1,8 @@
 <template>
-    <section>
-        <the-header :menu-items="menuItems"></the-header>
+    <section class="layout-section">
+        <the-header class="the-header" :menu-items="menuItems"></the-header>
         <Nuxt />
-        <the-footer></the-footer>
+        <the-footer class="the-footer"></the-footer>
     </section>
 </template>
 
@@ -18,13 +18,23 @@ export default {
                 {
                     name: 'Pokedex',
                     url: '/pokedex'
-                },
-                {
-                    name: 'Legendaries',
-                    url: '/legendaries'
                 }
             ]
         }
     },
 }
 </script>
+
+<style>
+.layout-section {
+    display: grid;
+    grid: "header" 60px "content" auto "footer" 50px;
+    height: 100vh;
+}
+.the-header {
+    grid-area: header;
+}
+.the-footer {
+    grid-area: footer;
+}
+</style>

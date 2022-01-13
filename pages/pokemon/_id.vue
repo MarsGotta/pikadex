@@ -1,8 +1,8 @@
 <template> 
-    <section>
+    <section class="pokemon-section">
         <h1>{{ pokemon.name }}</h1>
         <img v-if="number > 804" :src="`/pokemons/default.png`" width="300" />
-        <img v-else :src="`/pokemons/${this.number}.png`" width="300" />
+        <img v-else :src="`/pokemons/${number}.png`" width="300" />
         <h2>Abilities</h2>
         <ul>
             <li v-for="(ability, index) in pokemon.abilities" :key="index" >
@@ -66,3 +66,10 @@ export default {
     },
 }
 </script>
+
+<style>
+    .pokemon-section {
+        grid-area: content;
+        padding: 20px;
+    }
+</style>

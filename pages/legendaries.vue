@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="legendaries-section">
         Legendaries
     </section>
 </template>
@@ -14,3 +14,9 @@ export default {
     },
 }
 </script>
+
+<style>
+    .legendaries-section {
+        grid-area: content;
+    }
+</style>

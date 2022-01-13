@@ -2,9 +2,9 @@
     <header>
         <span>
             <mars-logo />
-            <mars-icon name="hamburger" @click="toggleMenu" />
+            <mars-icon name="hamburger" class="icon-hamburger" @click="toggleMenu" />
         </span>
-        <mars-menu v-show="showMenu" :items="menuItems"/>
+        <mars-menu v-show="showMenu" :items="menuItems" @click-item="toggleMenu" />
     </header>
 </template>
 
@@ -24,12 +24,17 @@ export default {
     methods: {
         toggleMenu() {
             this.showMenu = !this.showMenu;
-        }
+        },
     },
 }
 </script>
 
 <style scoped>
+header {
+    position: fixed;
+    width: 100%;
+}
+
 header span {
     display: flex;
     align-items: center;
@@ -37,11 +42,15 @@ header span {
     padding: 0 20px;
     height: 60px;
     background-color: var(--color-carmesi-700);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-svg {
+.icon-hamburger {
     fill: var(--color-ocre-500);
     cursor: pointer;
+}
+
+.icon-hamburger:hover {
+    fill: var(--color-ocre-600);
 }
 </style>

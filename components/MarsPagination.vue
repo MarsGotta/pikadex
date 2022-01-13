@@ -28,3 +28,34 @@ export default {
     }
 }
 </script>
+<style scoped>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagination button {
+        margin: 0 10px;
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 5px;
+        background-color: var(--color-ocre-500);
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .pagination select {
+        width: 100px;
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        background-color: var(--color-ocre-500);
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
