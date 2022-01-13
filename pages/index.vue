@@ -4,7 +4,7 @@
     <p>
       You can know the type of Pokemon, its strengths, disadvantages and abilities
     </p>
-    <mars-button> See pokemons </mars-button>
+    <mars-button @click="handleClick"> See pokemons </mars-button>
   </section>
 </template>
 
@@ -19,5 +19,19 @@ export default {
             currentPage: 1,
       })
     },
+    methods: {
+        handleClick() {
+            this.$router.push({ path: `/pokedex` });
+        }
+    },
 }
 </script>
+
+<style>
+body {
+  margin: 0;
+
+  --color-ocre-500: #F29408;
+  --color-carmesi-700: #A01A13;
+}
+</style>
