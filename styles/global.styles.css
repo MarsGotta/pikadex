@@ -5,8 +5,14 @@ body {
   background-color: var(--color-carmesi-800);
   color: white;
 
-  --color-ocre-500: #F29408;
-  --color-ocre-600: #C57907;
-  --color-carmesi-700: #A01A13;
-  --color-carmesi-800: #72130E;
+  --color-ocre-500: #f29408;
+  --color-ocre-600: #c57907;
+  --color-carmesi-700: #a01a13;
+  --color-carmesi-800: #72130e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
